@@ -1,0 +1,94 @@
+<!DOCTYPE html> <!-- Defines the document as HTML5 -->
+<html lang="en"> <!-- Root HTML element and language -->
+
+<head> <!-- Head section contains metadata -->
+
+<meta charset="UTF-8"> <!-- Character encoding -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile responsiveness -->
+
+<title>Home | Forza Authority</title> <!-- Browser tab title -->
+
+<link rel="stylesheet" href="css/style.css"> <!-- Connects CSS stylesheet -->
+
+<link rel="icon" type="image/png" href="assets/images/VCD201_Favicon.png">
+
+<link rel="stylesheet" href="https://use.typekit.net/txn6nxg.css"> <!-- Adobe font (Neulis Sans) -->
+
+</head>
+
+<body class="home"> <!-- Start of visible page content -->
+
+<!-- ================= HEADER ================= -->
+
+<header class="navbar">
+
+<div class="logo">
+<a href="index.html">
+<img src="assets/images/vcd201_logo_week1pmclass.png" alt="FA Logo">
+</a>
+</div>
+
+<button class="hamburger">
+☰
+</button>
+
+<nav class="nav-menu">
+
+<nav> <!-- Navigation menu -->
+
+<ul> <!-- Navigation list -->
+
+<li><a href="index.html">Home</a></li> <!-- Home page link -->
+<li><a href="edstart.html">Editor's Letter</a></li>
+
+<li><a href="style.html">Feature: Business</a></li> <!-- Style Page -->
+
+<li><a href="reflection.html">Feature: In Game</a></li> <!-- Future page -->
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+
+<main class="hero"> <!-- Main hero section -->
+
+<h1>Your Home of Everything Forza Horizon</h1> <!-- Main heading -->
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer"> <!-- Footer section -->
+
+<p>© Forza Authority 2026</p> <!-- Author credit -->
+
+</footer>
+
+<script>
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+
+window.addEventListener("scroll", function(){
+    const navbar = document.querySelector(".navbar");
+
+    if(window.scrollY > 50){
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
+</script>
+
+</body> <!-- End of page content -->
+
+</html> <!-- End of HTML document -->

@@ -1,0 +1,715 @@
+/* Reset default browser spacing */
+html {
+    overflow-y: scroll;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+/* Page layout */
+
+body{
+
+font-family:Arial, sans-serif; /* Default body text font */
+
+display:flex;
+
+flex-direction:column;
+
+min-height:100vh;
+
+}
+
+
+/* Navigation bar */
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 40px;
+
+background:#eeeeee;
+
+}
+
+
+/* Logo size */
+
+.logo img{
+
+height:60px;
+
+}
+
+
+/* Navigation list */
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:40px;
+
+}
+
+
+/* Navigation links */
+
+nav a{
+
+text-decoration:none;
+
+color:black;
+
+font-family:"neulis-sans", sans-serif;
+
+font-size:20px;
+
+font-weight:700;
+
+}
+
+
+/* Hero section */
+
+.hero{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#2e3192;
+
+color:white;
+
+}
+
+
+/* Hero heading */
+
+.hero h1{
+
+font-family:"neulis-sans", sans-serif;
+
+font-size:80px;
+
+
+}
+
+
+/* Footer */
+
+.footer{
+
+background:#eeeeee;
+
+padding:20px 40px;
+
+font-family:"neulis-sans", sans-serif;
+
+font-weight:700;
+
+font-size:20px;
+
+}
+
+
+/* Research page title */
+
+.research-header{
+
+background:#2e3192;
+
+color:white;
+
+padding:60px 40px;
+
+}
+
+
+/* Research heading font */
+
+.research-header h1{
+
+font-family:"neulis-sans", sans-serif;
+
+font-size:80px;
+
+}
+
+/* Research page container */
+
+.research-container{
+
+background:#f5f5f5;
+
+padding:40px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:30px;
+
+}
+
+
+/* Individual research blocks */
+
+.research-block{
+
+display:flex;
+
+gap:30px;
+
+background:white;
+
+padding:30px;
+
+align-items:center;
+
+}
+
+
+/* Image size */
+
+.research-image img{
+
+cursor:pointer;
+
+width:300px;
+
+height:auto;
+
+}
+
+
+/* Paragraph text */
+
+.research-text p{
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px; 
+}
+
+.research-text p{
+    margin-bottom: 16px;
+}
+
+.research-text p:last-child{
+    margin-bottom: 0; /* removes extra gap at the end */
+}
+
+
+.research-text h2{
+    font-family:"neulis-sans", sans-serif;
+    font-size:20px;
+    margin-bottom: 12px; /* 👈 space below heading */
+}
+
+.research-text h2{
+    margin-bottom: 10px;
+}
+
+.research-text p{
+    margin-bottom: 16px;
+}
+
+
+
+
+/* Style Tile Page*/
+
+/* style page title */
+
+.style-header{
+
+background:#2e3192;
+
+color:white;
+
+padding:60px 40px;
+
+}
+
+
+/* style heading font */
+
+.style-header h1{
+
+font-family:"neulis-sans", sans-serif;
+
+font-size:80px;
+
+}
+
+/* style page container */
+
+.style-container{
+
+background:#f5f5f5;
+
+padding:40px;
+
+display:flex;
+
+justify-content:center;   /* centers image horizontally */
+
+align-items:center;       /* centers vertically if needed */
+
+}
+
+
+/* Individual style blocks */
+
+.style-block{
+
+display:flex;
+
+gap:30px;
+
+background:white;
+
+padding:30px;
+
+align-items:center;
+
+}
+
+
+/* Image size */
+
+.style-image img{
+
+width:100%;        /* fills the container */
+
+max-width:800px;  /* optional: prevents it getting too huge */
+
+height:auto;
+
+display:block;
+
+}
+
+/*---------------------------design process page--*/
+
+/* -------- Slideshow -------- */
+
+.slideshow{
+position:relative;
+width:300px;
+}
+
+.slide{
+display:none;
+width:100%;
+height:auto;
+}
+
+.slide.active{
+display:block;
+}
+
+/* Arrow buttons */
+
+.prev,
+.next{
+
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+
+font-size:24px;
+padding:8px 12px;
+cursor:pointer;
+
+}
+
+.prev{
+left:10px;
+}
+
+.next{
+right:10px;
+}
+
+/* -------- Lightbox -------- */
+
+.lightbox{
+    display:none;
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.9);
+
+    z-index:2000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    max-width:90%;
+    max-height:90vh;
+}
+
+.lightbox-image{
+    max-width:100%;
+    max-height:60vh; 
+    height:auto;
+}
+
+.lightbox-close{
+
+position:absolute;
+
+top:30px;
+right:40px;
+
+font-size:40px;
+color:white;
+
+cursor:pointer;
+
+}
+
+.image-caption{
+
+font-size:14px;
+font-style:italic;
+margin-top:8px;
+color:#000000;
+
+}
+
+.lightbox-caption{
+
+color:white;
+margin-top:15px;
+font-size:18px;
+text-align:center;
+
+}
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+background:rgba(0,0,0,0.9);
+}
+
+.lightbox-content{
+position:relative;
+max-width:90%;
+max-height:90%;
+}
+
+.lightbox-image{
+max-width:100%;
+max-height:90vh;
+display:block;
+}
+
+/* ---------------- MOBILE BREAKPOINT ---------------- */
+
+.hamburger{
+display:none;
+font-size:30px;
+background:none;
+border:none;
+cursor:pointer;
+}
+
+/* Phone layout */
+
+@media (max-width: 1085px){/* Swap logo for mobile */
+.logo img{
+content: url("../assets/images/mobile_logo_vcd201.png");
+height: 50px; /* adjust if needed */
+}
+
+.nav-menu ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 60px 20px 20px;
+
+    align-items: flex-end;   /* pushes items to the right */
+    text-align: right;       /* aligns the text itself */
+}
+
+.nav-menu {
+    padding-right: 30px;
+}
+
+/* NAVBAR */
+
+.navbar{
+padding:20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    position: relative; 
+}
+
+/* Hide menu by default */
+
+.nav-menu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+background:#eeeeee;
+}
+
+.nav-menu ul{
+flex-direction:column;
+gap:20px;
+padding:20px;
+}
+
+/* Show menu when active */
+
+.nav-menu.active{
+display:block;
+}
+
+/* Show hamburger */
+
+.hamburger{
+display:block;
+}
+
+/* HERO TEXT */
+
+.hero h1{
+font-size:48px;
+text-align:left;
+padding:20px;
+}
+
+/* RESEARCH BLOCK STACK */
+
+.research-block{
+flex-direction:column;
+text-align:left;
+}
+
+.research-image img{
+width:100%;
+max-width:400px;
+}
+
+/* PAGE HEADINGS */
+
+.research-header h1,
+.style-header h1{
+font-size:40px;
+}
+
+/* STYLE TILE */
+
+.style-image img{
+max-width:100%;
+}
+
+}
+
+.style-image img{
+cursor:pointer;
+}
+
+.logo a{
+display:inline-block;
+}
+
+.logo img{
+cursor:pointer;
+}
+
+/* ---------- NAV LINK BASE ---------- */
+nav a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+/* ---------- UNDERLINE (hidden by default) ---------- */
+nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: #2e3192;
+}
+
+/* ---------- HOVER EFFECT ---------- */
+nav a:hover{
+    color: #2e3192;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+/* ---------- ACTIVE PAGE ---------- */
+
+
+body.home nav a[href="index.html"],
+body.research nav a[href="research.html"],
+body.reflection nav a[href="reflection.html"],
+body.style nav a[href="style.html"],
+body.edstart nav a[href="edstart.html"]{
+    color: #2e3192;
+}
+/* Keep underline visible for active */
+body.home nav a[href="index.html"]::after,
+body.research nav a[href="research.html"]::after,
+body.reflection nav a[href="reflection.html"]::after,
+body.style nav a[href="style.html"]::after,
+body.edstart nav a[href="edstart.html"]::after{
+    width: 100%;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:#eeeeee;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Smooth transition */
+.navbar{
+    transition: padding 0.4s ease, background 0.4s ease;
+}
+
+/* Shrunk header state */
+.navbar.scrolled{
+    padding: 10px 40px; /* was 10px → now more subtle */
+}
+
+/* Shrink logo */
+.navbar.scrolled .logo img{
+    height: 40px;
+}
+
+.logo img{
+    height: 60px;
+    transition: height 0.4s ease;
+}
+
+.navbar.scrolled .logo img{
+    height: 50px; /* smaller change */
+}
+
+.research-block,
+.style-block{
+    border-radius: 8px; /* subtle rounding */
+}
+
+/* Round image corners slightly */
+.research-image img,
+.style-image img{
+    border-radius: 8px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.lightbox-prev {
+    left: 30px;
+}
+
+.lightbox-next {
+    right: 30px;
+}
+
+/* ================= REFLECTION PAGE ================= */
+
+.reflection-container{
+    background:#f5f5f5;
+    padding:40px;
+    display:flex;
+    justify-content:center;
+}
+
+.reflection-block{
+    background:white;
+    padding:40px;
+    max-width:850px;
+    border-radius:8px;
+}
+
+.reflection-text h2{
+    font-family:"neulis-sans", sans-serif;
+    font-size:20px;
+    margin-bottom:16px;
+}
+
+.reflection-text p{
+    font-family:Arial, sans-serif;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:16px;
+}
+
+.reflection-text p:last-child{
+    margin-bottom:0;
+}
+
